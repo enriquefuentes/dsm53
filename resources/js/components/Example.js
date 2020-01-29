@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+
+/* importamos componentes personalizados*/
+import menu from './menu/menu';
+
+
 function Example() {
     return (
+        <>
+        <menu />
         <div className="container">
             <div className="row justify-content-center">
                 <div className="col-md-8">
@@ -14,6 +21,7 @@ function Example() {
                 </div>
             </div>
         </div>
+        </>
     );
 }
 
