@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es-MX">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    hola como estan
-</body>
+    <meta http-equiv="X-UA.Compatible" content="ie=edge">
+
+    <title>UTVT</title>
+    <link rel="stylesheet" href="{{ asset ('css/app.css')}}">
+  </head>
+  <body>
+    <div id="example"></div>
+    <script src="{{ asset('js/app.js')}}"></script>
+  </body>
 </html>
