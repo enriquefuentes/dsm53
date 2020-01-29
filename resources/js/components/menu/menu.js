@@ -1,6 +1,6 @@
-import React from 'react';
+import React from './node_modules/react';
 
-export default function menu(props){
-    return 'menu';
+export default function Menu(props){
+    return 'Menu';
     
 }
