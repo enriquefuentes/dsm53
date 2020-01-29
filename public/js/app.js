@@ -68989,16 +68989,9 @@ if (document.getElementById('example')) {
   !*** ./resources/js/components/Menu/menu.js ***!
   \**********************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Menu; });
-!(function webpackMissingModule() { var e = new Error("Cannot find module './node_modules/react'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-
-function Menu(props) {
-  return 'Menu';
-}
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\www\\app.dsm53.com\\resources\\js\\components\\Menu\\menu.js'");
 
 /***/ }),
 
