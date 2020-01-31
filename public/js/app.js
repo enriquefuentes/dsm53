@@ -68953,15 +68953,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Menu_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Menu/menu */ "./resources/js/components/Menu/menu.js");
-
-
-/* importamos componentes personalizados*/
 
 
 
 function Example() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Menu, null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row justify-content-center"
@@ -68973,7 +68969,7 @@ function Example() {
     className: "card-header"
   }, "Example Component"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card-body"
-  }, "I'm an example component!"))))));
+  }, "I'm an example component!")))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Example);
@@ -68981,17 +68977,6 @@ function Example() {
 if (document.getElementById('example')) {
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Example, null), document.getElementById('example'));
 }
-
-/***/ }),
-
-/***/ "./resources/js/components/Menu/menu.js":
-/*!**********************************************!*\
-  !*** ./resources/js/components/Menu/menu.js ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\www\\app.dsm53.com\\resources\\js\\components\\Menu\\menu.js'");
 
 /***/ }),
 
