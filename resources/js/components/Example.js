@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Direccion from './formulario/Direccion';
 
 function Example() {
     return (
-        <div className="container">
+        <Direccion/>
+        /*<div className="container">
             <div className="row justify-content-center">
                 <div className="col-md-8">
                     <div className="card">
@@ -13,7 +15,7 @@ function Example() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div>*/
     );
 }
 

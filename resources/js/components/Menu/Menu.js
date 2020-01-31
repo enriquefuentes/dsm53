@@ -1,5 +1,5 @@
-import React from './node_modules/react';
-
+import React from 'react';
+import ReactDOM from 'react-dom';
 export default function Menu(props){
     return 'Menu';
     
