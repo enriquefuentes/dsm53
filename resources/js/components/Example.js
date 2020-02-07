@@ -1,32 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Direccion from './formularios/Direccion';
-import Carrera from './formularios/Carrera';
-import Asignatura from './formularios/Asignatura';
-import Validacion from './formularios/Validacion';
+import React from 'react'
+import ReactDOM from 'react-dom'
+ 
+import{BrowserRouter as Router, Switch, Router} from 'react-router-dom';
 
-/* importamos componentes personalizados */
-import Menu from './Menu/Menu';
+import Menu from './menu';
 
-function Example() {
-    return (
-        <>
-    
-            <div className="container">
-                <Menu />
-                <Direccion />
-                <Carrera />
-                <Asignatura />
-                <Validacion />
-            </div>
-
-        </>
-    );
-}
+import index from './paginas/index;
+import contacto from './paginas/contacto;
+import error404 from './paginas/error404;
 
 
-export default Example;
+return(
+    <Router>
+        <div classname="container">
+            <Switch>
+                <Router path="/" exact={true}>
+                    <index />
+                </Router>             
+                <Router path="/contacto" exact={true}></Router>
+                    <contacto />
+                </Route>
+                <Router path="*" exact={true}></Router>
+                    <error404 
+                    encabezado="ERROR"
+                    titulo="Pagina no encontrada"
+                    texto="No se encuentra el recurso solicitado"/>
+                </Route>
 
-if (document.getElementById('root')) {
-    ReactDOM.render(<Example />, document.getElementById('root'));
-}
+            </Switch>
+        </div>
+    </Router>
+)
