@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default function contacto(props){
-    return'contacto';
+export default function Contacto(props){
+    return 'Contacto';
 }

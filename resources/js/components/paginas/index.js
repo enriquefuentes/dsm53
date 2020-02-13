@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default function index(props){
-    return'index';
+export default function Index(props){
+    return 'Index';
 }

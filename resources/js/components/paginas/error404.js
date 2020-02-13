@@ -1,15 +1,18 @@
 import React from 'react';
 import {Card} from 'react-bootstrap';
-
-export default function error404(props){
-    return(
-       <Card bg="danger"  text="white" style={{witdh}}>
-           <Card.Header>{props.encabezado}</Card.Header>
-           <Card.Body>
-               <Card.title></Card.title>
-               <Card.text></Card.text>
-           </Card.Body>
-
-       </Card>
-    )
+export default function Error404(props){
+    return (
+        <>
+        <Card bg="danger" text="white" style={{ width: '18rem' }}>
+    <Card.Header>{props.Encabezado}</Card.Header>
+    <Card.Body>
+    <Card.Title>{props.title}</Card.Title>
+      <Card.Text>
+        {props.text}
+      </Card.Text>
+    </Card.Body>
+  </Card>
+  <br />
+  </>
+    );
 }

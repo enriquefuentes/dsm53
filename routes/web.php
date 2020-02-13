@@ -11,26 +11,17 @@
 |
 */
 
-//Route::get('/', function () {
-  //  return view('welcome');
-//});
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/{path?}',
+[
+    'uses' => 'ReactController@show',
+    'as' => 'react',
+    'where' => ['path' => '.*']
+]);
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-Route::recursce('direcciones', 'ControladorDirecciones')->except(['show', 'destroy']);
-Route::get('/{path?}',[
-    'uses'=>'ReactControll@show',
-    'as'=>'react',
-    'where'=>['path'=>'.*']   
-    ]);
-
-    

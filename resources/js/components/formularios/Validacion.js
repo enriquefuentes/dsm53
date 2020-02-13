@@ -3,8 +3,16 @@ import { Formik } from 'formik';
 import * as yup from 'yup';
 import {Form, Button, InputGroup } from 'react-bootstrap';
 
+var hoy = new Date();
+var hace = new Date();
+hace.setFullYear(hoy.getFullYear() - 3);
+
 const schema = yup.object({
-    firstName: yup.string().required(),
+    firstName: yup.string().matches(/^[1-9]{2}[0-9]{7}$/, 'Formato de matricula no valido'),
+    fecha_nacimiento:yup.date()
+      .min(hace, 'Debes tener maximo 5 años')
+      .max(hace, 'Fecha no puede ser posterior a la fecha actual'),
+    firstName: yup.string().min(5, 'Demasiado corto').required(),
     lastName: yup.string().required(),
     username: yup.string().required(),
     city: yup.string().required(),
@@ -19,8 +27,8 @@ export default function Validacion(props){
           validationSchema={schema}
           onSubmit={console.log}
           initialValues={{
-            firstName: 'Mark',
-            lastName: 'Otto',
+             firstName: 'Mark',
+             lastName: 'Otto',
           }}
         >
           {({
@@ -33,18 +41,34 @@ export default function Validacion(props){
             errors,
           }) => (
             <Form noValidate onSubmit={handleSubmit}>
+
+            <Form.Group  controlId="matricula">
+              <Form.Label>Matricula</Form.Label>
+              <Form.Control
+                type="text"
+                name="
+                matricula"
+                value={values.matricula}
+                onChange={handleChange}
+                isValid={touched.matricula && !errors.matricula}
+              />
+              <Form.Control.Feedback>Correcto</Form.Control.Feedback>
+            </Form.Group>
+
+            <Form.Group  controlId="fecha_nacimiento">
+              <Form.Label>Fecha de Nacimiento</Form.Label>
+              <Form.Control
+                type="date"
+                name="fecha_nacimiento"
+                value={values.fecha_nacimiento}
+                onChange={handleChange}
+                isValid={touched.fecha_nacimiento && !errors.fecha_nacimiento}
+              />
+              <Form.Control.Feedback>Correcto</Form.Control.Feedback>
+            </Form.Group>
+
               <Form.Row>
-                <Form.Group  md="4" controlId="validationFormik01">
-                  <Form.Label>First name</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="firstName"
-                    value={values.firstName}
-                    onChange={handleChange}
-                    isValid={touched.firstName && !errors.firstName}
-                  />
-                  <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                </Form.Group>
+
                 <Form.Group  md="4" controlId="validationFormik02">
                   <Form.Label>Last name</Form.Label>
                   <Form.Control
@@ -136,7 +160,7 @@ export default function Validacion(props){
                   id="validationFormik0"
                 />
               </Form.Group>
-              <Button type="submit">Submit form</Button>
+              <Button type="submit">Enviar</Button>
             </Form>
           )}
         </Formik>

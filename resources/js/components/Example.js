@@ -1,33 +1,45 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
- 
-import{BrowserRouter as Router, Switch, Router} from 'react-router-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import Menu from './menu';
+//Componentes
+import Menu from './Menu/Menu';
 
-import index from './paginas/index;
-import contacto from './paginas/contacto;
-import error404 from './paginas/error404;
+//Para poder manejar las rutas
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
+//Componentes de Página
+import Index from './paginas/Index';
+import Contacto from './paginas/Contacto';
+import Error404 from './paginas/Error404';
 
-return(
-    <Router>
-        <div classname="container">
-            <Switch>
-                <Router path="/" exact={true}>
-                    <index />
-                </Router>             
-                <Router path="/contacto" exact={true}></Router>
-                    <contacto />
-                </Route>
-                <Router path="*" exact={true}></Router>
-                    <error404 
-                    encabezado="ERROR"
-                    titulo="Pagina no encontrada"
-                    texto="No se encuentra el recurso solicitado"/>
-                </Route>
+function Example() {
+  return (
+  
+  <Router>
+    <div className="container">
+      <Switch>
+        <Route path="/" exact="{true}">
+        <Index />
+        </Route>
 
-            </Switch>
-        </div>
-    </Router>
-)
+        <Route path="/Contacto" exact="{true}">
+        <Contacto />
+        </Route>
+
+        <Route path="*">
+        <Error404 
+        Encabezado="ERROR"
+        title="Página no encontrada"
+        text="No se encontró el recurso solicitado"
+        />
+        </Route>
+      </Switch>
+    </div>
+  </Router>
+  );
+}
+  export default Example;
+  
+  if (document.getElementById('root')){
+    ReactDOM.render(<Example />, document.getElementById('root'));
+  }
