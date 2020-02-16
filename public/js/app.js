@@ -84986,8 +84986,8 @@ function Index(props) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\www\dsm53\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\www\dsm53\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\www\app.dsm53.com\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\www\app.dsm53.com\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
