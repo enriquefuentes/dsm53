@@ -1,10 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use Validator;
+use App\Asignatura;
 
-class ControladorDirecciones extends Controller
+class AsignaturasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,8 @@ class ControladorDirecciones extends Controller
      */
     public function index()
     {
-        //
+        $asignatura = asignatura::all();
+        return view('asignatura.index', compact('asignaturas'));
     }
 
     /**
@@ -23,7 +24,7 @@ class ControladorDirecciones extends Controller
      */
     public function create()
     {
-        //
+        return view('asignatura.form');
     }
 
     /**
@@ -34,9 +35,18 @@ class ControladorDirecciones extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->setValidator($request)->validate();
+        Asignatura::create($request->all());
+        flash('Asignatura creada satisfactoriamente')->success();
+        return redirect('asignaturas');
     }
 
+    protected function setValidator(Request $request, $replaceValidationRules = [])
+    {
+        return Validator::make($request->all()
+        , array_merge(Asignaturas::validationRules(), $replaceValidationRules))
+        ->setAttributeNames(Asignaturas::attributeNames());
+    }
     /**
      * Display the specified resource.
      *

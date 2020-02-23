@@ -10,18 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+ Route::get('/', function () { return view('welcome');});
+ Route::get('/direcciones', function () { return view('welcome');});
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/{path?}',
+// [
+//     'uses' => 'ReactController@show',
+//     'as' => 'react',
+//     'where' => ['path' => '.*']
+// ]);
 
-Route::get('/{path?}',
-[
-    'uses' => 'ReactController@show',
-    'as' => 'react',
-    'where' => ['path' => '.*']
-]);
+// Auth::routes();
 
-Auth::routes();
+// Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/home', 'HomeController@index')->name('home');

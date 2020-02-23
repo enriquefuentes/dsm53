@@ -11,16 +11,23 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Index from './paginas/Index';
 import Contacto from './paginas/Contacto';
 import Error404 from './paginas/Error404';
+import Direcciones from './paginas/Direcciones';
 
 function Example() {
   return (
   
   <Router>
+
     <div className="container">
       <Switch>
+      <Menu />
         <Route path="/" exact="{true}">
         <Index />
         </Route>
+        <Route path="/direcciones" exact="{true}">
+        <Direcciones />
+        </Route>
+
 
         <Route path="/Contacto" exact="{true}">
         <Contacto />

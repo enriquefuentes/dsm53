@@ -84811,6 +84811,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _paginas_Index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./paginas/Index */ "./resources/js/components/paginas/Index.js");
 /* harmony import */ var _paginas_Contacto__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./paginas/Contacto */ "./resources/js/components/paginas/Contacto.js");
 /* harmony import */ var _paginas_Error404__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./paginas/Error404 */ "./resources/js/components/paginas/Error404.js");
+/* harmony import */ var _paginas_Direcciones__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./paginas/Direcciones */ "./resources/js/components/paginas/Direcciones.js");
 
  //Componentes
 
@@ -84822,13 +84823,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function Example() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Menu_Menu__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
     path: "/",
     exact: "{true}"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_paginas_Index__WEBPACK_IMPORTED_MODULE_4__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
+    path: "/direcciones",
+    exact: "{true}"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_paginas_Direcciones__WEBPACK_IMPORTED_MODULE_7__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
     path: "/Contacto",
     exact: "{true}"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_paginas_Contacto__WEBPACK_IMPORTED_MODULE_5__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
@@ -84918,6 +84923,42 @@ __webpack_require__.r(__webpack_exports__);
 
 function Contacto(props) {
   return 'Contacto';
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/paginas/Direcciones.js":
+/*!********************************************************!*\
+  !*** ./resources/js/components/paginas/Direcciones.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Direcciones; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function Direcciones(props) {
+  var url = 'http://localhost:8000/api/direcciones';
+  fetch(url, {
+    method: 'get',
+    credentials: 'include',
+    mode: 'cors',
+    headers: new Headers({
+      'Authorization': 'Bearer rg7E4asTCcqrYBIcNlAPB4Kuxy61EhGj1rakYbAJgESlwRq4ZkaPjAIjYeyi',
+      'Accept': 'Application/json',
+      'Access-Control-allow-Credentials': true,
+      'Access-Control-Request-Method': 'get',
+      'Access-Control-Request-Headers': 'Authorization'
+    })
+  }).then(function (response) {
+    return response.json();
+  }).then(function (myjson) {
+    console.log(myjson);
+  })["catch"](console.log);
+  return 'hola';
 }
 
 /***/ }),
